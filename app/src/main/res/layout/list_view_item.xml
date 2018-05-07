@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="5dp"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimary"
+        android:paddingStart="30dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/view"
+        android:text="Centre Name"
+        android:maxLines="1"
+        android:id="@+id/centreName" />
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="50dp"
+        android:background="@color/colorEmerald"
+        android:id="@+id/view"/>
+
+</RelativeLayout>

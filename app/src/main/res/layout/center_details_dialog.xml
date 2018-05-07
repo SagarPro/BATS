@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_border"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Center Details"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvTitle"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/tvTitle"
+        android:background="@color/colorPrimary"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/rlDetails">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/tvCName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCName"
+            android:text="Email Address:"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/email"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/email"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/tvCEmail"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCEmail"
+            android:text="Phone:"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/phone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/tvCPhone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCPhone"
+            android:text="Directions:"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/direction"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/direction"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCDirection"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCDirection"
+            android:text="Password:"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/password"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCPassword"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCPassword"
+            android:text="Access Type:"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/accessType"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_below="@+id/accessType"
+            android:id="@+id/cvAccessType">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:background="@drawable/dialog_border"
+                    android:overlapAnchor="false"
+                    android:id="@+id/spAccessType"/>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="v"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/rlDetails"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/btnCCancel"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="edit"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/rlDetails"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/btnCEdit"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/rlDetails"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/btnCSave"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="delete"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/rlDetails"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimaryDark"
+        android:visibility="gone"
+        android:id="@+id/btnCDelete" />
+
+</RelativeLayout>

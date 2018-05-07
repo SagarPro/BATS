@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:id="@+id/rlNewEnquiry"
+    tools:context="sagsaguz.enquirytracking.NewEnquiryActivity">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_back"
+        android:layout_marginTop="20dp"
+        android:id="@+id/ivBack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Enquiry"
+        android:textSize="22sp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/newEnquiry"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@+id/newEnquiry"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/newEnquiry">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:id="@+id/scrollView">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@color/colorSMS">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Child Name"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="10dp"
+                    android:nextFocusUp="@id/etChildName"
+                    android:nextFocusLeft="@id/etChildName"
+                    style="@style/FormEditText"
+                    android:id="@+id/etChildName"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Parent Name"
+                    android:inputType="textPersonName"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/etChildName"
+                    style="@style/FormEditText"
+                    android:id="@+id/etParentName"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Child Age"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/etParentName"
+                    style="@style/FormEditText"
+                    android:id="@+id/etChildAge"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="House Locality"
+                    android:inputType="text"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/etChildAge"
+                    style="@style/FormEditText"
+                    android:id="@+id/etHouseLocality"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile No."
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/etHouseLocality"
+                    style="@style/FormEditText"
+                    android:id="@+id/etMobileNumber"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Parent's Email ID"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/etMobileNumber"
+                    style="@style/FormEditText"
+                    android:id="@+id/etParentEmail"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assign to :"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@id/etParentEmail"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/AssignTo"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColorHint="@color/textColor"
+                    android:inputType="textLongMessage"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/dialog_border"
+                    android:layout_below="@+id/AssignTo"
+                    android:overlapAnchor="false"
+                    android:id="@+id/spAssignTo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lead Stage :"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@id/spAssignTo"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/LeadStage"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColorHint="@color/textColor"
+                    android:inputType="textLongMessage"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/dialog_border"
+                    android:layout_below="@+id/LeadStage"
+                    android:overlapAnchor="false"
+                    android:id="@+id/spLeadStage"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admission for :"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@id/spLeadStage"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/AdmissionFor"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColorHint="@color/textColor"
+                    android:inputType="textLongMessage"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/dialog_border"
+                    android:layout_below="@+id/AdmissionFor"
+                    android:overlapAnchor="false"
+                    android:id="@+id/spAdmissionFor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enquiry Type :"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@id/spAdmissionFor"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/EnquiryType"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColorHint="@color/textColor"
+                    android:inputType="textLongMessage"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/dialog_border"
+                    android:layout_below="@+id/EnquiryType"
+                    android:overlapAnchor="false"
+                    android:id="@+id/spEnquiryType"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How have you come to know about us :"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_below="@id/spEnquiryType"
+                    android:layout_marginBottom="3dp"
+                    android:id="@+id/HYK"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColorHint="@color/textColor"
+                    android:inputType="textLongMessage"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/dialog_border"
+                    android:layout_below="@+id/HYK"
+                    android:overlapAnchor="false"
+                    android:id="@+id/spHYK"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter follow up notes (max 150 characters)"
+                    android:textSize="18sp"
+                    android:textColorHint="@color/textColor"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorPrimary"
+                    android:maxLength="150"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/spHYK"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"
+                    android:id="@+id/etFollowUpNotes"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/etFollowUpNotes"
+                    android:id="@+id/rlNFD">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NFD"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_marginBottom="3dp"
+                        android:layout_toStartOf="@+id/Rating"
+                        android:id="@+id/NFD"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/spRating"
+                        android:layout_below="@+id/NFD"
+                        android:hint="Click Here"
+                        android:textColorHint="@color/textColor"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"
+                        android:background="@color/colorWhite"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/tvNFD"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rating"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorBlack"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/Rating"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textColorHint="@color/textColor"
+                        android:inputType="textLongMessage"
+                        android:textCursorDrawable="@null"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/dialog_border"
+                        android:layout_toEndOf="@+id/NFD"
+                        android:layout_below="@+id/Rating"
+                        android:overlapAnchor="false"
+                        android:id="@+id/spRating"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SUBMIT"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@color/colorEmerald"
+                    android:layout_below="@id/rlNFD"
+                    android:id="@+id/btnAddEnquiry"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

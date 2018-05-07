@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_border"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tvTitle"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/tvTitle"
+        android:background="@color/colorPrimary"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/rlDetails">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Centre Name"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCentreName"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCentreName"
+            android:hint="Centre Location"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCenterLocation"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCenterLocation"
+            android:hint="Centre email address"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCenterEmail"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCenterEmail"
+            android:hint="Centre phone number"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:inputType="phone"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCenterPhone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCenterPhone"
+            android:hint="Password"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCenterPassword"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etCenterPassword"
+            android:hint="Google Map Link"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:background="@drawable/list_border"
+            android:id="@+id/etCenterDirections"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorEmerald"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/rlDetails"
+        android:text="Create"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/btnCreate"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTab"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rlDetails"
+        android:text="Cancel"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/btnCancel"/>
+
+</RelativeLayout>

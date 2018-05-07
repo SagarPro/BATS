@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/login_image_bg"
+    android:id="@+id/rlLogin"
+    tools:context="sagsaguz.enquirytracking.LoginActivity">
+
+    <!--<View
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.5"
+        android:background="@drawable/login_bottom_bg"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="230dp"
+        android:alpha="0.5"
+        android:background="@drawable/login_top_bg"/>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="310dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bright Admission"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSMS"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ba"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tracking System"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorSMS"
+            android:layout_below="@+id/ba"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ts"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/rlLoginEnters">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/colorAccent"
+            android:alpha="0.9"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:background="@color/colorWhite"
+            android:layout_margin="10dp"
+            android:id="@+id/cvEmailAddress">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Email or phone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:inputType="textEmailAddress"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/etEmailAddress"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorWhite"
+            android:layout_below="@id/cvEmailAddress"
+            android:id="@+id/cvPassword">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Password"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:inputType="textPassword"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/etPassword"/>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/cvPassword"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/tvForgotPassword"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            android:layout_margin="10dp"
+            android:layout_below="@id/cvPassword"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:id="@+id/cvLogin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:background="@color/colorPrimary"/>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:elevation="2dp"
+        android:id="@+id/pbLogin"/>
+
+</RelativeLayout>

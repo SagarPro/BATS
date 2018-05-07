@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_border">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT FOLLOW UP DATE"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:id="@+id/updateNFD"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/updateNFD"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorSilver"
+        android:id="@+id/smsView"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updateNFD"
+        android:background="@color/colorAccent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        android:id="@+id/cvToday">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Today's update"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:id="@+id/etTodayUpdate"/>
+
+    </android.support.v7.widget.CardView>
+
+    <!--<android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvToday"
+        android:background="@color/colorAccent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="5dp"
+        android:id="@+id/cvFollow">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Next followUp notes"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:id="@+id/etFollowUpdate"/>
+
+    </android.support.v7.widget.CardView>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvToday"
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
+        android:id="@+id/llNFD">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="5dp"
+            android:layout_weight="1"
+            android:id="@+id/cvNFD">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:id="@+id/tvNFD"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:id="@+id/cvStatus">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp"
+                    android:background="@drawable/dialog_border"
+                    android:overlapAnchor="false"
+                    android:id="@+id/spStatus"/>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="v"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/llNFD"
+        android:layout_marginTop="10dp"
+        android:id="@+id/cvLeadStage">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textLongMessage"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:background="@drawable/dialog_border"
+                android:overlapAnchor="false"
+                android:id="@+id/spLead"/>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="v"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/cvLeadStage"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rlRating">
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:numStars="5"
+            android:stepSize="1"
+            android:theme="@style/RatingBar"
+            android:id="@+id/ratingBar"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/rlRating"
+        android:layout_margin="10dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:layout_alignParentStart="true"
+            app:cardCornerRadius="5dp"
+            android:id="@+id/cvCancel">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTab"
+                android:text="Cancel"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:id="@+id/btnCancel"/>
+
+        </android.support.v7.widget.CardView>
+
+        <!--<Spinner
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/textColor"
+            android:inputType="textLongMessage"
+            android:textCursorDrawable="@null"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:background="@drawable/dialog_border"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:overlapAnchor="false"
+            android:id="@+id/spUpdateRating"/>-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@color/colorAccent"
+            android:layout_alignParentEnd="true"
+            app:cardCornerRadius="5dp"
+            android:id="@+id/cvUpdate">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorEmerald"
+                android:text="Update"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:id="@+id/btnUpdateNFD"/>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

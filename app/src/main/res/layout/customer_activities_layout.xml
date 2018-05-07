@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:id="@+id/rlCustomerActivities"
+    tools:context="sagsaguz.enquirytracking.CustomerActivitiesActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        android:background="@color/colorWhite"
+        android:id="@+id/rlUserDetails">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/user_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Phone"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@id/user_name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/user_phone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/user_name"
+            android:id="@+id/llRating" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlUserDetails"
+        android:layout_above="@+id/llOptions"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        android:background="@color/colorWhite">
+
+        <!--<View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="127dp"
+            android:layout_below="@id/circleView"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimaryDark"
+            android:id="@+id/lineView"/>-->
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:scrollbars="none"
+            android:divider="@android:color/transparent"
+            android:background="@android:color/transparent"
+            android:listSelector="@android:color/transparent"
+            android:id="@+id/lvActivities"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        android:weightSum="3"
+        android:id="@+id/llOptions">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/colorSMS"
+            android:src="@drawable/icon_sms_white"
+            android:id="@+id/ibSMS"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Task"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"
+            android:id="@+id/btnUpdate"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/colorEmerald"
+            android:src="@drawable/icon_call_white"
+            android:id="@+id/ibCall"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

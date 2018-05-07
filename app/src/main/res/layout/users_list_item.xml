@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_border"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlTop">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/user_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Phone"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_below="@id/user_name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/user_phone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/user_name"
+            android:id="@+id/llRating" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="1dp"
+        android:layout_below="@id/rlTop"
+        android:background="@color/colorAccent"
+        android:id="@+id/view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enquiry Status: "
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:id="@+id/enquiryStatus"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="status"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/enquiryStatus"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:id="@+id/tvEnquiryStatus"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Follow Up: "
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_below="@+id/enquiryStatus"
+            android:id="@+id/followUp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="57"
+            android:textSize="14sp"
+            android:textColor="@color/colorBlack"
+            android:layout_marginStart="5dp"
+            android:layout_below="@+id/enquiryStatus"
+            android:layout_toEndOf="@+id/followUp"
+            android:id="@+id/tvFollowUp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

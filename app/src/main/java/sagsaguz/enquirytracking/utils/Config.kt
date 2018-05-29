@@ -4,15 +4,15 @@ class Config {
 
     companion object {
 
-        val ACCESSKEY = "AKIAIQWNSRPKRXNBRBDA"
-        val SECRETKEY = "Q97nXrAHuhrf/A8+hGyL09Xjz00xFxoH+WnpCFPy"
+        val ACCESSKEY = "your_aws_access_key"
+        val SECRETKEY = "your_aws_secret_key"
 
-        val CUSTOMERTABLE = "enquirytracking-mobilehub-1860763478-CustomerDetails"
+        val CUSTOMERTABLE = "CustomerDetails_table"
 
-        val CENTERTABLE = "enquirytracking-mobilehub-1860763478-Center"
+        val CENTERTABLE = "Center-table"
 
-        val FROMEMAIL = "sagar@brightkidmont.com"
-        val FROMPASSWORD = "systems12345"
+        val FROMEMAIL = "your_email"
+        val FROMPASSWORD = "your_password"
 
     }
 

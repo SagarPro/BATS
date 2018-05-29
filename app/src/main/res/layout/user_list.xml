@@ -31,7 +31,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorTab"
-        android:weightSum="3"
+        android:weightSum="4"
         android:id="@+id/rlBottom">
 
         <TextView
@@ -66,6 +66,49 @@
             android:textSize="18sp"
             android:gravity="center"/>
 
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/icon_search"
+            android:layout_gravity="center"
+            android:id="@+id/ivSearch"/>
+
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTab"
+        android:visibility="gone"
+        android:id="@+id/rlSearch">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Search here..."
+            android:textColorHint="@color/textColor"
+            android:textColor="@color/colorWhite"
+            android:background="@android:color/transparent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/cancelSearch"
+            android:id="@+id/etSearchUser"/>
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="X"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/cancelSearch"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>

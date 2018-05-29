@@ -250,7 +250,7 @@ class LoginActivity : AppCompatActivity() {
         email.isSSLOnConnect = true
         email.setFrom(Config.FROMEMAIL)
         email.addTo(toEmail)
-        email.subject = "Password recovery from Enquiry Tracking"
+        email.subject = "Password recovery from BATS"
         email.setTextMsg("Your password is "+ pass)
         //val kotlinLogoURL = URL("https://kotlinlang.org/assets/images/twitter-card/kotlin_800x320.png")
         //val cid = email.embed(kotlinLogoURL, "Kotlin logo")

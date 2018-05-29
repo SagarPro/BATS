@@ -73,6 +73,15 @@
             android:background="@color/colorPrimaryDark"
             android:id="@+id/lineView"/>-->
 
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/tvDate"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/lineView"/>
+
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -31,7 +31,7 @@ class UserListAdapter : BaseAdapter {
         val holder = Holder()
         val rowView = inflater!!.inflate(R.layout.users_list_item, null)
         holder.userName = rowView.findViewById(R.id.user_name)
-        holder.userName!!.text = customerList[position].parentName
+        holder.userName!!.text = customerList[position].childName
         holder.userPhone = rowView.findViewById(R.id.user_phone)
         holder.userPhone!!.text = customerList[position].phone
         holder.llRating = rowView.findViewById(R.id.llRating)
@@ -49,6 +49,8 @@ class UserListAdapter : BaseAdapter {
         holder.tvEnquiryStatus!!.text = customerList[position].status
         holder.tvFollowUp = rowView.findViewById(R.id.tvFollowUp)
         holder.tvFollowUp!!.text = customerList[position].nfd!!.size.toString()
+        holder.tvAssignedTo = rowView.findViewById(R.id.tvAssignedTo)
+        holder.tvAssignedTo!!.text = customerList[position].center
 
         return rowView
     }
@@ -71,6 +73,7 @@ class UserListAdapter : BaseAdapter {
         internal var llRating: LinearLayout? = null
         internal var tvEnquiryStatus: TextView? = null
         internal var tvFollowUp: TextView? = null
+        internal var tvAssignedTo: TextView? = null
     }
 
 }

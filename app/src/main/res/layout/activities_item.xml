@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="wrap_content"
     android:layout_marginStart="5dp"
     android:layout_marginEnd="5dp">
     
@@ -16,29 +16,39 @@
         android:maxLines="1"
         android:id="@+id/tvDate"/>
 
+    <!--<View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/tvDate"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/lineView"/>-->
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/tvDate"
         android:layout_marginEnd="5dp"
-        android:layout_marginTop="7dp"
         android:id="@+id/rlView">
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/circle_outline"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/circleOutView"/>
 
         <View
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginBottom="7dp"
             android:background="@drawable/circle"
-            android:elevation="5dp"
-            android:id="@+id/circleView"/>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="80dp"
+            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/circleView"
-            android:background="@color/colorAccent"
-            android:id="@+id/lineView"/>
+            android:id="@+id/circleView"/>
 
     </RelativeLayout>
 
@@ -48,8 +58,6 @@
         android:layout_toEndOf="@id/rlView"
         android:text="Activities"
         android:textSize="18sp"
-        android:textColor="@color/colorPrimary"
-        android:maxLines="4"
         android:ellipsize="end"
         android:id="@+id/tvActivity"/>
 

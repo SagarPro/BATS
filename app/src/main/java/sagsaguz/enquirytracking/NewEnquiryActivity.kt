@@ -320,10 +320,12 @@ class NewEnquiryActivity : AppCompatActivity() {
     }
 
     private fun sendSMS(customerNo: String, centerNo: String){
-        var customerMessage = "Hi "+etParentName.text+", thank you for your interest in "+preschoolName+" for "+etChildName.text+". Now experience the joy of learning."
+        val psName = preschoolName.replace("BKMH", "Bright kid")
+        var customerMessage = "Hi "+etParentName.text+", thank you for your interest in "+psName+" for "+etChildName.text+". Now experience the joy of learning."
         val centerMessage = "Hi, "+etParentName.text+" has been assigned to your center for follow up admission."
         if (adminLocation == "All Users"){
-            customerMessage = "Hi "+etParentName.text+", thank you for your interest in "+spAssignTo.selectedItem.toString()+" for "+etChildName.text+", full of sunshine, learning, fun & care. Thank you"
+            val psNameMain = spAssignTo.selectedItem.toString().replace("BKMH", "Bright kid")
+            customerMessage = "Hi "+etParentName.text+", thank you for your interest in "+psNameMain+" for "+etChildName.text+", full of sunshine, learning, fun & care. Thank you"
             SmsManager.getDefault().sendTextMessage(centerNo, null, centerMessage, null, null)
         }
         SmsManager.getDefault().sendTextMessage(customerNo, null, customerMessage, null, null)
@@ -340,6 +342,15 @@ class NewEnquiryActivity : AppCompatActivity() {
         finish()
     }*/
 
+    private fun capitalize(capString: String): String {
+        val capBuffer = StringBuffer()
+        val capMatcher = Pattern.compile("([a-z])([a-z]*)", Pattern.CASE_INSENSITIVE).matcher(capString)
+        while (capMatcher.find()) {
+            capMatcher.appendReplacement(capBuffer, capMatcher.group(1).toUpperCase() + capMatcher.group(2).toLowerCase())
+        }
+        return capMatcher.appendTail(capBuffer).toString()
+    }
+
     @SuppressLint("StaticFieldLeak")
     inner class AddEnquiry : AsyncTask<Void, Void, Boolean>() {
 
@@ -355,10 +366,10 @@ class NewEnquiryActivity : AppCompatActivity() {
 
             customerDetailsDo.phone(etMobileNumber.text.toString())
             customerDetailsDo.emailId(etParentEmail.text.toString())
-            customerDetailsDo.childName(etChildName.text.toString())
-            customerDetailsDo.parentName(etParentName.text.toString())
+            customerDetailsDo.childName(capitalize(etChildName.text.toString()))
+            customerDetailsDo.parentName(capitalize(etParentName.text.toString()))
             customerDetailsDo.childAge(etChildAge.text.toString())
-            customerDetailsDo.locality(etHouseLocality.text.toString())
+            customerDetailsDo.locality(capitalize(etHouseLocality.text.toString()))
             customerDetailsDo.admissionFor(spAdmissionFor.selectedItem.toString())
             customerDetailsDo.enquiryType(spEnquiryType.selectedItem.toString())
             customerDetailsDo.hyk(spHYK.selectedItem.toString())

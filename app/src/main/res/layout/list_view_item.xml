@@ -17,7 +17,6 @@
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@id/view"
         android:text="Centre Name"
-        android:maxLines="1"
         android:id="@+id/centreName" />
 
     <View

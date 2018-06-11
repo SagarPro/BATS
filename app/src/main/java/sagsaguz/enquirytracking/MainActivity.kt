@@ -35,6 +35,7 @@ import com.amazonaws.services.dynamodbv2.model.ScanRequest
 import com.amazonaws.services.dynamodbv2.model.ScanResult
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.add_center_dialog.*
+import kotlinx.android.synthetic.main.list_view_item.view.*
 import sagsaguz.enquirytracking.alarm.AlarmReceiver
 import sagsaguz.enquirytracking.fragments.PendingList
 import sagsaguz.enquirytracking.fragments.TodayList
@@ -282,7 +283,7 @@ class MainActivity : AppCompatActivity() {
         val lvCentres = dialog.findViewById<ListView>(R.id.lvItems)
         val centerName = ArrayList<String>()
         centerName.clear()
-        Collections.sort(centerList, CenterLocationComparator())
+        Collections.sort(centerList, CenterNameComparator())
         for (i in 0 until centerList.size){
             centerName.add(centerList[i].name.toString())
         }
@@ -304,9 +305,9 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    inner class CenterLocationComparator : Comparator<CenterDO> {
+    inner class CenterNameComparator : Comparator<CenterDO> {
         override fun compare(obj1: CenterDO, obj2: CenterDO): Int {
-            return obj1.location.toString().toLowerCase().compareTo(obj2.location.toString().toLowerCase())
+            return obj1.name.toString().toLowerCase().compareTo(obj2.name.toString().toLowerCase())
         }
     }
 
@@ -696,6 +697,7 @@ class MainActivity : AppCompatActivity() {
                             customerDetailsDo.rating = map["rating"]!!.s
                             customerDetailsDo.center = map["center"]!!.s
                             customerDetailsDo.status = map["status"]!!.s
+                            customerDetailsDo.leadStage = map["leadStage"]!!.s
 
                             val nfdVal = map["NFD"]!!.m
                             val nfd = HashMap<String, String>()
@@ -755,6 +757,9 @@ class MainActivity : AppCompatActivity() {
             val rowView = inflater!!.inflate(R.layout.list_view_item, null)
             holder.centreName = rowView.findViewById(R.id.centreName)
             holder.centreName!!.text = centreList[position]
+            holder.view = rowView.findViewById(R.id.view)
+            val v = holder.view as View
+            v.visibility = View.GONE
 
             return rowView
         }
@@ -773,6 +778,7 @@ class MainActivity : AppCompatActivity() {
 
         private inner class Holder {
             internal var centreName: TextView? = null
+            internal var view: View? = null
         }
     }
 

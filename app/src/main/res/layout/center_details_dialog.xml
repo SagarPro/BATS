@@ -47,7 +47,6 @@
             android:textSize="18sp"
             android:textColor="@color/colorPrimary"
             android:padding="8dp"
-            android:maxLines="1"
             android:layout_marginBottom="5dp"
             android:background="@drawable/list_border"
             android:id="@+id/tvCName"/>

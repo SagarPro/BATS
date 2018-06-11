@@ -407,6 +407,7 @@ class CustomerActivitiesActivity : AppCompatActivity() {
         templateNames.add("Thanks For Your Interest")
         templateNames.add("Montessori Demo Class Invitation")
         templateNames.add("Called & No Response SMS")
+        templateNames.add("Call Not Received")
         templateNames.add("Book Demo Activity Class - 1")
         templateNames.add("Book Demo Activity Class - 2")
         templateNames.add("Book Demo Activity Class - 3")
@@ -433,6 +434,7 @@ class CustomerActivitiesActivity : AppCompatActivity() {
         templateList.add("Hi "+customerDetails.parentName+ ", thank you for your interest in "+psName+" for "+customerDetails.childName+". Now experience the joy of learning.")
         templateList.add("Hi "+customerDetails.parentName+ ", introduce your child, "+customerDetails.childName+" to world of Montessori. Take a Montessori demo class at "+psName+". See the difference, discover your child's potential.")
         templateList.add("Hi "+customerDetails.parentName+ ", called you for discussing "+customerDetails.childName+"'s admission at "+psName+". Please feel free to contact me at your convenience. Thanks.")
+        templateList.add("Hi "+customerDetails.parentName+ ", we called you for discussing the admission for "+customerDetails.childName+" at "+ psName +" as the academic session is going to start. For further discussion, do get in touch with us.")
         templateList.add("Hi "+customerDetails.parentName+ ", seeing is believing. See "+customerDetails.childName+" doing Montessori activity in the demo class at "+psName+". Call to book the demo activity class for your child")
         templateList.add("Hi "+customerDetails.parentName+ ", let "+customerDetails.childName+" touch, feel, explore Montessori activities in our demo activity class at "+psName+". Call to book demo activity date. Thanks.")
         templateList.add("Hi "+customerDetails.parentName+ ", Montessori activities nurture the brain development of children. Call to book the Montessori demo activity date for "+customerDetails.childName+" at "+psName+". Thanks.")
@@ -982,7 +984,7 @@ class CustomerActivitiesActivity : AppCompatActivity() {
                 dateList.add(todayDate)
             }
 
-            if (nnfd[todayDate] == " ") {
+            if (nnfd[todayDate] == " " || nnfd[todayDate] == null) {
                 nnfd.put(todayDate, string[0].toString())
                 fActivities.put(todayDate, string[0].toString())
             } else {

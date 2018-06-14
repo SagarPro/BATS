@@ -391,12 +391,14 @@ class NewEnquiryActivity : AppCompatActivity() {
 
             val nfd = HashMap<String, String>()
 
+            nfd.put(sdf.format(myCalendar.time), etFollowUpNotes.text.toString())
+
             val originalFormat = SimpleDateFormat("dd MMM, yyyy", Locale.ENGLISH)
             val targetFormat = SimpleDateFormat("yyyy/MM/dd")
             val date = originalFormat.parse(tvNFD.text.toString())
             val dd = targetFormat.format(date)
 
-            nfd.put(dd, etFollowUpNotes.text.toString())
+            nfd.put(dd, " ")
 
             customerDetailsDo.nfd(nfd)
         }
